@@ -42,7 +42,7 @@ def save_data():
 
 
 def get_current_key():
-    keys = {"w": 2, "a": 3, "s": 4, "d": 5, "space": 6, "shift": 7} #добавте свои даннеы для сбора мне достаточно этого "1" оставте под ничего не нажато это важно для обучения модели
+    keys = {"w": 2, "a": 3, "s": 4, "d": 5, "space": 6, "shift": 7} #добавьте свои данные для сбора , мне достаточно этого. "1" оставте под ничего не нажато это важно для обучения модели
     for key, num in keys.items():
         if is_pressed(key):
             return num
@@ -184,7 +184,7 @@ def main():
     for proc in java_processes:
         print(f"PID: {proc['pid']}, Name: {proc['name']}")
 
-    selected_pid = int(input("Введите PID нужного процесса javaw.exe: "))
+    selected_pid = int(input("Введите PID нужного процесса javaw.exe: ")) #так у java зачастую 2 процесса
     pm = pymem.Pymem(selected_pid)
 
     time.sleep(2)
